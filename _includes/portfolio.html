@@ -1,0 +1,23 @@
+<section id="projects">
+	<div>
+		<h2>Projects</h2>
+		<div class="button-group">
+			<label>
+				<input type="radio" name="category" value=".category-Featured" checked="checked"><span>Featured</span></input>
+			</label>
+			<label>
+				<input type="radio" name="category" value=".category-Interior"><span>Interior</span></input>
+			</label>
+			<label>
+				<input type="radio" name="category" value=".category-Exterior"><span>Exterior</span></input>
+			</label>
+		</div>
+		{% for post in site.posts %}
+			<div class="item category-{{ post.category }} {% if post.featured == true %}category-Featured{% endif %}">
+                <a href="{{ site.url}}{{ post.url }}">
+                    <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}"/>
+                </a>
+            </div>
+		{% endfor %}
+	</div>
+</section>

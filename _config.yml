@@ -1,0 +1,32 @@
+# Site settings
+title: A2studio
+subtitle: Interior and Exterior + Residential and Commercial
+email: info@a2studio.co.uk
+url_dev: http://192.168.59.103:4000
+url_live: http://a2studio.co.uk/jekyll
+url: http://192.168.59.103:4000
+description: "Interior, exterior, residential and commercial design and architecture."
+
+# Contact
+address:
+  - line: 46b Tottenham Lane
+  - line: London N8 7ED
+phone: +44 (0)20 7998 9066
+
+# Footer settings
+footer:
+  copyright: A2studio
+  location: Location
+  social: Around the Web
+
+# Handling Reading
+safe:         false
+include:      [".htaccess"]
+exclude:      ["README.md",".gitignore"]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title

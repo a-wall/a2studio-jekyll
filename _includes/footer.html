@@ -1,0 +1,14 @@
+    <footer>
+        <div>
+            <h3>{{ site.footer.location }}</h3>
+            <p>
+                {% for addy in site.address %}
+                    {{ addy.line }} <br>
+                {% endfor %}
+            </p>
+            <p>T: {{ site.phone }} E: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+        </div>
+        <div>
+            Copyright &copy; {{ site.footer.copyright }} {{ site.time | date: '%Y' }}
+        </div>
+    </footer>
