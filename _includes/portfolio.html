@@ -3,21 +3,28 @@
 		<h2>Projects</h2>
 		<div class="button-group">
 			<label>
-				<input type="radio" name="category" value=".category-Featured" checked="checked"><span>Featured</span></input>
+				<input type="radio" name="category" value=".filter-featured" checked="checked"><span>Featured</span></input>
 			</label>
 			<label>
-				<input type="radio" name="category" value=".category-Interior"><span>Interior</span></input>
+				<input type="radio" name="category" value=".filter-interior"><span>Interior</span></input>
 			</label>
 			<label>
-				<input type="radio" name="category" value=".category-Exterior"><span>Exterior</span></input>
+				<input type="radio" name="category" value=".filter-exterior"><span>Exterior</span></input>
 			</label>
 		</div>
+		<div class="project-gallery">
 		{% for post in site.posts %}
-			<div class="item category-{{ post.category }} {% if post.featured == true %}category-Featured{% endif %}">
+			<div class="item {% for category in post.categories %}filter-{{ category }} {% endfor %}">
                 <a href="{{ site.url}}{{ post.url }}">
-                    <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}"/>
+                	<div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="project" src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}"/>
                 </a>
             </div>
 		{% endfor %}
+		</div>
 	</div>
 </section>

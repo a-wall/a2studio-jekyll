@@ -4,7 +4,7 @@ img: warwick.jpg
 alt: image-alt
 project-date: April 2011
 location: Warwick Gardens
-category: Interior
+categories: [featured,interior]
 featured: yes
 flickr-setid: 72157652594225392
 ---

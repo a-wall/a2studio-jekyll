@@ -34,32 +34,41 @@ nav {
   position: fixed;
   right: 0;
   left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 20px 10px;
   z-index: 1030;
   background-color: #6d6b64;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  -webkit-transition: padding .3s;
+  -moz-transition: padding .3s;
+  transition: padding .3s;
 }
 
-img {
+img.about {
   width: 100%;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inherit;
+}
+
+img.project {
+  width: 100%;
+  max-width: 600px;
 }
 
 header {
 	padding-top: 100px;
 	padding-bottom: 50px;
 	text-align: center;
-  	color: #fff;
-  	background: #c7c9c8;
+  color: #fff;
+  background: #c7c9c8;
 }
 
 footer {
 	text-align: center;
-  	color: #fff;
-  	background: #c7c9c8;
+	color: #fff;
+	background: #c7c9c8;
 }
 
 header span
@@ -71,6 +80,10 @@ header span
 
 section {
   padding: 75px 0;
+}
+
+section p {
+  padding: 0 10px;
 }
 
 section h2 {
@@ -91,17 +104,16 @@ section h2 {
   text-align: center;
 }
 
+nav.shrink {
+  padding: 10px 10px;
+}
+
 .navbar-brand {
   display: block;
   font-size: 19px;
-  padding: 18.5px 15px 20.5px;;
+  padding: 3.5px 15px 5.5px;;
   line-height: 21px;
-  height: 60px;
-}
-
-.navbar-header{}
-  margin-right: -15px;
-  margin-left: -15px;
+  height: 30px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
@@ -109,13 +121,12 @@ section h2 {
   background-color: #1a242f;
 }
 
-.navbar-toggle {
+button.navbar-toggle {
   position: relative;
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 13px;
-  margin-bottom: 13px;
+  margin: 0px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -139,6 +150,7 @@ section h2 {
 }
 
 .nav {
+  margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
@@ -149,11 +161,51 @@ section h2 {
   padding: 10px 15px;
 }
 
-.portfolio-link {
+.item>a {
   display: block;
   position: relative;
   margin: 0 auto;
   max-width: 400px;
+}
+
+#projects .item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+
+.caption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(243,112,33,.8);
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+.caption:hover {
+    opacity: 1;
+}
+
+.caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.caption-content i {
+    margin-top: -12px;
+}
+
+.caption-content h3, .caption-content h4 {
+    margin: 0;
 }
 
 [type="radio"] {
@@ -193,4 +245,40 @@ section h2 {
   cursor: pointer;
   border-radius: 4px;
   display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-header {
+    float: left;
+  }
+
+  .navbar-right {
+    float: right;
+  }
+
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+
+  .navbar-collapse.collapse {
+    display: block;
+    height: auto;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .nav>li>a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .nav>li {
+    float: left;
+  }
 }

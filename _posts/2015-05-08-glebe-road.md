@@ -4,7 +4,7 @@ img: glebe.jpg
 alt: image-alt
 project-date: April 2014
 location: Glebe Road
-category: Exterior
+categories: [featured,exterior,interior]
 featured: yes
 flickr-setid: 72157652594225392
 ---
