@@ -2,9 +2,8 @@
 title: A2studio
 subtitle: Interior and Exterior + Residential and Commercial
 email: info@a2studio.co.uk
-url_dev: http://192.168.59.103:4000
-url_live: http://a2studio.co.uk/jekyll
-url: http://192.168.59.103:4000
+baseurl_live: /jekyll
+baseurl: 
 description: "Interior, exterior, residential and commercial design and architecture."
 
 # Contact
@@ -29,4 +28,4 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Build settings
 markdown: kramdown
-permalink: /:categories/:title
+permalink: /projects/:title

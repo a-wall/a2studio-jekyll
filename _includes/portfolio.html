@@ -15,13 +15,13 @@
 		<div class="project-gallery">
 		{% for post in site.posts %}
 			<div class="item {% for category in post.categories %}filter-{{ category }} {% endfor %}">
-                <a href="{{ site.url}}{{ post.url }}">
+                <a href="{{ site.baseurl }}{{ post.url }}">
                 	<div class="caption">
                         <div class="caption-content">
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img class="project" src="img/portfolio/{{ post.img }}" alt="{{ post.alt }}"/>
+                    <img class="project" src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" alt="{{ post.alt }}"/>
                 </a>
             </div>
 		{% endfor %}
